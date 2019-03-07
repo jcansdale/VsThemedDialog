@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:ThemedDialog.UI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary
+                x:Key="ThemedDialogDefaultStylesKey"
+                Source="pack://application:,,,/ThemedDialog.UI;component/Themes/ThemedDialogDefaultStyles.xaml" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
