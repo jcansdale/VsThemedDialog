@@ -1,15 +1,12 @@
-﻿<pfui:DialogWindow x:Class="ThemedDialog.UI.MainWindow"
+﻿<Window x:Class="ThemedDialog.UI.AppWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThemedDialog.UI"
         mc:Ignorable="d"
-        xmlns:pfui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.15.0"
-        Title="Visual Studio Window" Height="450" Width="800">
-
+        Title="App Window" Height="450" Width="800">
     <Grid>
         <local:MainControl />
     </Grid>
-
-</pfui:DialogWindow>
+</Window>
