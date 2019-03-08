@@ -4,9 +4,10 @@
              StartupUri="AppWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary
-                x:Key="ThemedDialogDefaultStylesKey"
-                Source="pack://application:,,,/ThemedDialog.UI;component/Themes/ThemedDialogDefaultStyles.xaml" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/VsBrush.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary x:Key="ThemedDialogDefaultStylesKey" Source="Resources/ThemedDialogDefaultStyles.xaml" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>
