@@ -1,8 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
                     xmlns:local="clr-namespace:ThemedDialog.UI">
 
-    <SolidColorBrush x:Key="VsBrush.Window" Color="White" />
-    <SolidColorBrush x:Key="VsBrush.WindowText" Color="Black" />
+    <x:Static x:Key="{x:Static vsshell:VsBrushes.WindowKey}" Member="SystemColors.WindowBrush" />
+    <x:Static x:Key="{x:Static vsshell:VsBrushes.WindowTextKey}" Member="SystemColors.WindowTextBrush" />
 
 </ResourceDictionary>
