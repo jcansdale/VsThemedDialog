@@ -3,5 +3,6 @@
                     xmlns:local="clr-namespace:ThemedDialog.UI">
 
     <SolidColorBrush x:Key="VsBrush.Window" Color="White" />
+    <SolidColorBrush x:Key="VsBrush.WindowText" Color="Black" />
 
 </ResourceDictionary>
