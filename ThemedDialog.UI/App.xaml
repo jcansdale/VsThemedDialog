@@ -5,10 +5,19 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/VsBrushes.xaml" />
-                <ResourceDictionary Source="Resources/CommonControlsColors.xaml" />
+                <ResourceDictionary Source="Themes/Dark/VsBrushes.xaml" />
+                <ResourceDictionary Source="Themes/Dark/VsColors.xaml" />
+                <ResourceDictionary Source="Themes/Dark/CommonControlsColors.xaml" />
+                <ResourceDictionary Source="Themes/Dark/ThemedDialogColors.xaml" />
+                <ResourceDictionary Source="Themes/Dark/EnvironmentColors.xaml" />
+                <ResourceDictionary Source="Themes/Dark/TreeViewColors.xaml" />
+                <ResourceDictionary Source="Themes/CommonControlsButtonStyle.xaml" />
+                <ResourceDictionary Source="Themes/CommonControlsCheckboxStyle.xaml" />
+                <ResourceDictionary Source="Themes/CommonControlsComboboxStyle.xaml" />
+                <ResourceDictionary Source="Themes/CommonControlsTextboxStyle.xaml" />
+                <ResourceDictionary Source="Themes/ThemedDialogStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <ResourceDictionary x:Key="ThemedDialogDefaultStylesKey" Source="Resources/ThemedDialogDefaultStyles.xaml" />
+            <ResourceDictionary x:Key="ThemedDialogDefaultStylesKey" Source="Themes/ThemedDialogDefaultStyles.xaml" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>
