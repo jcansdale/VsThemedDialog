@@ -5,12 +5,49 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Themes/Dark/VsBrushes.xaml" />
-                <ResourceDictionary Source="Themes/Dark/VsColors.xaml" />
-                <ResourceDictionary Source="Themes/Dark/CommonControlsColors.xaml" />
-                <ResourceDictionary Source="Themes/Dark/ThemedDialogColors.xaml" />
-                <ResourceDictionary Source="Themes/Dark/EnvironmentColors.xaml" />
-                <ResourceDictionary Source="Themes/Dark/TreeViewColors.xaml" />
+                <ResourceDictionary>
+                    <ResourceDictionary x:Key="Themes/Dark">
+                        <ResourceDictionary.MergedDictionaries>
+                            <ResourceDictionary Source="Themes/Dark/VsBrushes.xaml" />
+                            <ResourceDictionary Source="Themes/Dark/VsColors.xaml" />
+                            <ResourceDictionary Source="Themes/Dark/CommonControlsColors.xaml" />
+                            <ResourceDictionary Source="Themes/Dark/ThemedDialogColors.xaml" />
+                            <ResourceDictionary Source="Themes/Dark/EnvironmentColors.xaml" />
+                            <ResourceDictionary Source="Themes/Dark/TreeViewColors.xaml" />
+                        </ResourceDictionary.MergedDictionaries>
+                    </ResourceDictionary>
+                    <ResourceDictionary x:Key="Themes/Light">
+                        <ResourceDictionary.MergedDictionaries>
+                            <ResourceDictionary Source="Themes/Light/VsBrushes.xaml" />
+                            <ResourceDictionary Source="Themes/Light/VsColors.xaml" />
+                            <ResourceDictionary Source="Themes/Light/CommonControlsColors.xaml" />
+                            <ResourceDictionary Source="Themes/Light/ThemedDialogColors.xaml" />
+                            <ResourceDictionary Source="Themes/Light/EnvironmentColors.xaml" />
+                            <ResourceDictionary Source="Themes/Light/TreeViewColors.xaml" />
+                        </ResourceDictionary.MergedDictionaries>
+                    </ResourceDictionary>
+                    <ResourceDictionary x:Key="Themes/Blue">
+                        <ResourceDictionary.MergedDictionaries>
+                            <ResourceDictionary Source="Themes/Blue/VsBrushes.xaml" />
+                            <ResourceDictionary Source="Themes/Blue/VsColors.xaml" />
+                            <ResourceDictionary Source="Themes/Blue/CommonControlsColors.xaml" />
+                            <ResourceDictionary Source="Themes/Blue/ThemedDialogColors.xaml" />
+                            <ResourceDictionary Source="Themes/Blue/EnvironmentColors.xaml" />
+                            <ResourceDictionary Source="Themes/Blue/TreeViewColors.xaml" />
+                        </ResourceDictionary.MergedDictionaries>
+                    </ResourceDictionary>
+                    <ResourceDictionary x:Key="Themes/HighContrast">
+                        <ResourceDictionary.MergedDictionaries>
+                            <ResourceDictionary Source="Themes/HighContrast/VsBrushes.xaml" />
+                            <ResourceDictionary Source="Themes/HighContrast/VsColors.xaml" />
+                            <ResourceDictionary Source="Themes/HighContrast/CommonControlsColors.xaml" />
+                            <ResourceDictionary Source="Themes/HighContrast/ThemedDialogColors.xaml" />
+                            <ResourceDictionary Source="Themes/HighContrast/EnvironmentColors.xaml" />
+                            <ResourceDictionary Source="Themes/HighContrast/TreeViewColors.xaml" />
+                        </ResourceDictionary.MergedDictionaries>
+                    </ResourceDictionary>
+                </ResourceDictionary>
+                <StaticResource ResourceKey="Themes/HighContrast" />
                 <ResourceDictionary Source="Themes/CommonControlsButtonStyle.xaml" />
                 <ResourceDictionary Source="Themes/CommonControlsCheckboxStyle.xaml" />
                 <ResourceDictionary Source="Themes/CommonControlsComboboxStyle.xaml" />
