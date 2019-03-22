@@ -22,7 +22,10 @@
         <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="200,109,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="213,170,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="230,232,0,0" VerticalAlignment="Top" />
-        <TextBlock HorizontalAlignment="Left" Margin="283,307,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="283,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+            <Run>TextBlock with</Run>
+            <Hyperlink>Hyperlink</Hyperlink>
+        </TextBlock>
 
         <TextBlock HorizontalAlignment="Left" Margin="324,376,0,0" TextWrapping="Wrap"
                    Text="TextBoxBorderFocusedBrushKey" VerticalAlignment="Top"
