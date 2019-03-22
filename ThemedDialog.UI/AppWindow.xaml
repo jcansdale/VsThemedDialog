@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ThemedDialog.UI"
         mc:Ignorable="d"
-        Title="App Window" Height="450" Width="800">
-    <Grid>
+        Title="App Window" Height="650" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <StaticResource ResourceKey="ThemedDialogDefaultStylesKey" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <ListBox x:Name="ThemeListBox" DockPanel.Dock="Top" SelectionChanged="ThemeListBox_SelectionChanged">
+            <Label>Light</Label>
+            <Label>Blue</Label>
+            <Label>Dark</Label>
+            <Label>HighContrast</Label>
+        </ListBox>
         <local:MainControl />
-    </Grid>
+    </DockPanel>
 </Window>

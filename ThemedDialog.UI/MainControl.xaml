@@ -30,12 +30,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="324,376,0,0" TextWrapping="Wrap"
                    Text="TextBoxBorderFocusedBrushKey" VerticalAlignment="Top"
                    Foreground="{DynamicResource {x:Static vs:CommonControlsColors.TextBoxBorderFocusedBrushKey}}" />
-        <ListBox x:Name="ThemeListBox" HorizontalAlignment="Left" Height="130" Margin="610,184,0,0" VerticalAlignment="Top" Width="124" SelectionChanged="ThemeListBox_SelectionChanged">
-            <Label>Light</Label>
-            <Label>Blue</Label>
-            <Label>Dark</Label>
-            <Label>HighContrast</Label>
-        </ListBox>
     </Grid>
 
 </UserControl>

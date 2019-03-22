@@ -24,19 +24,5 @@ namespace ThemedDialog.UI
         {
             InitializeComponent();
         }
-
-        private void ThemeListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (ThemeListBox.SelectedItem is Label label)
-            {
-                if (label.Content is string theme)
-                {
-                    if(TryFindResource($"Themes/{theme}") is ResourceDictionary themeResources)
-                    {
-                        Resources.MergedDictionaries.Add(themeResources);
-                    }
-                }
-            }
-       }
     }
 }
