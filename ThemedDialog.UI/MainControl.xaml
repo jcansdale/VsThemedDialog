@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"
+             xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
              mc:Ignorable="d" 
              Background="{DynamicResource {x:Static vs:EnvironmentColors.ToolWindowBackgroundBrushKey}}"
              Foreground="{DynamicResource {x:Static vs:EnvironmentColors.ToolWindowTextBrushKey}}"
@@ -30,6 +31,13 @@
         <TextBlock HorizontalAlignment="Left" Margin="324,376,0,0" TextWrapping="Wrap"
                    Text="TextBoxBorderFocusedBrushKey" VerticalAlignment="Top"
                    Foreground="{DynamicResource {x:Static vs:CommonControlsColors.TextBoxBorderFocusedBrushKey}}" />
+
+        <Label Style="{StaticResource {x:Static vsfx:VsResourceKeys.LabelEnvironment375PercentFontSizeStyleKey}}"
+               Foreground="{DynamicResource {x:Static vs:EnvironmentColors.ToolWindowTextBrushKey}}"
+               Content="375Percent" HorizontalAlignment="Left" Margin="546,196,0,0" VerticalAlignment="Top"/>
+
+        <TextBlock Style="{StaticResource {x:Static vsfx:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}"
+            HorizontalAlignment="Left" Margin="576,298,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
     </Grid>
 
 </UserControl>

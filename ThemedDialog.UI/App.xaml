@@ -47,6 +47,9 @@
                         </ResourceDictionary.MergedDictionaries>
                     </ResourceDictionary>
                 </ResourceDictionary>
+                <ResourceDictionary Source="Themes/Common/VsFonts.xaml" />
+                <ResourceDictionary Source="Themes/FontScalingLabelStyle.xaml" />
+                <ResourceDictionary Source="Themes/FontScalingTextBlockStyle.xaml" />
                 <StaticResource ResourceKey="Themes/HighContrast" />
                 <ResourceDictionary Source="Themes/CommonControlsButtonStyle.xaml" />
                 <ResourceDictionary Source="Themes/CommonControlsCheckboxStyle.xaml" />

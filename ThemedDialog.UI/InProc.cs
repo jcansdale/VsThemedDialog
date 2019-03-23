@@ -31,6 +31,14 @@ namespace ThemedDialog.UI
             GenerateXamlResources(typeof(VsColors), "shell", dir);
         }
 
+        [STAThread]
+        void Font()
+        {
+            var dir = @"C:\Source\github.com\jcansdale\ThemedDialog\ThemedDialog.UI\Themes\Common";
+            Directory.CreateDirectory(dir);
+            GenerateXamlResources(typeof(VsFonts), "shell", dir);
+        }
+
         static void GenerateXamlResources(Type keyType, string xmlNamespace, string dir)
         {
             var fileName = $"{keyType.Name}.xaml";
@@ -41,16 +49,24 @@ namespace ThemedDialog.UI
                 writer.WriteLine($"                    xmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"");
                 writer.WriteLine($"                    xmlns:{xmlNamespace}=\"clr-namespace:{keyType.Namespace};assembly={keyType.Assembly.GetName().Name}\">");
 
-                var keyProperties = keyType.GetProperties().Where(p => p.Name.EndsWith("Key"));
+                var fieldKeys = keyType.GetFields()
+                    .Where(f => f.Name.EndsWith("Key"))
+                    .Select(f => (f.GetValue(null), f.Name));
+                var propertyKeys = keyType.GetProperties()
+                    .Where(p => p.Name.EndsWith("Key"))
+                    .Select(p => (p.GetValue(null), p.Name));
+                var keys = fieldKeys.Concat(propertyKeys);
+
                 var rd = new ResourceDictionary();
-                foreach (var keyProperty in keyProperties)
+                foreach (var (key, keyName) in keys)
                 {
-                    var key = keyProperty.GetValue(null);
-                    var value = Application.Current.Resources[key];
+                    var value = Application.Current.TryFindResource(key);
+
+                    Console.WriteLine($"{key}: {value}");
 
                     if (value == null)
                     {
-                        writer.WriteLine($"<!-- couldn't find value for '{keyProperty.Name}' -->");
+                        writer.WriteLine($"<!-- couldn't find value for '{keyName}' -->");
                         continue;
                     }
 
@@ -63,8 +79,10 @@ namespace ThemedDialog.UI
                     rd.Add(key, value);
 
                     var xaml = XamlWriter.Save(value);
-                    var staticKey = $" x:Key=\"{{x:Static {xmlNamespace}:{keyType.Name}.{keyProperty.Name}}}\"";
+                    var staticKey = $" x:Key=\"{{x:Static {xmlNamespace}:{keyType.Name}.{keyName}}}\"";
                     xaml = xaml.Replace(" xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\"", staticKey);
+                    xaml = xaml.Replace(" xmlns=\"clr-namespace:System;assembly=mscorlib\"", " xmlns=\"clr-namespace:System;assembly=mscorlib\"" + staticKey);
+
                     writer.WriteLine($"    {xaml}");
                 }
 
