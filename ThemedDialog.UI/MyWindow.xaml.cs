@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ThemedDialog.UI
 {
     /// <summary>
-    /// Interaction logic for ExternalWindow.xaml
+    /// Interaction logic for MyWindow.xaml
     /// </summary>
-    public partial class AppWindow : Window
+    public partial class MyWindow : Window
     {
-        public AppWindow()
+        public MyWindow()
         {
             InitializeComponent();
         }

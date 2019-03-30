@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"
              xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"
+             xmlns:local="clr-namespace:ThemedDialog.UI"
              mc:Ignorable="d" 
              Background="{DynamicResource {x:Static vs:EnvironmentColors.ToolWindowBackgroundBrushKey}}"
              Foreground="{DynamicResource {x:Static vs:EnvironmentColors.ToolWindowTextBrushKey}}"
@@ -13,31 +14,41 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <StaticResource ResourceKey="ThemedDialogDefaultStylesKey" />
+                <StaticResource ResourceKey="{x:Static vsfx:VsResourceKeys.ThemedDialogDefaultStylesKey}" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="200,40,0,0" VerticalAlignment="Top" Width="75"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="200,109,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="213,170,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="230,232,0,0" VerticalAlignment="Top" />
-        <TextBlock HorizontalAlignment="Left" Margin="283,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+    <DockPanel>
+        <local:ThemeControl DockPanel.Dock="Top" />
+        <Grid>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="200,40,0,0" VerticalAlignment="Top" Width="75"/>
+            <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="200,109,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="213,170,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Label" HorizontalAlignment="Left" Margin="230,232,0,0" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="283,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
             <Run>TextBlock with</Run>
             <Hyperlink>Hyperlink</Hyperlink>
-        </TextBlock>
+            </TextBlock>
 
-        <TextBlock HorizontalAlignment="Left" Margin="324,376,0,0" TextWrapping="Wrap"
+            <TextBlock HorizontalAlignment="Left" Margin="324,376,0,0" TextWrapping="Wrap"
                    Text="TextBoxBorderFocusedBrushKey" VerticalAlignment="Top"
                    Foreground="{DynamicResource {x:Static vs:CommonControlsColors.TextBoxBorderFocusedBrushKey}}" />
 
-        <Label Style="{StaticResource {x:Static vsfx:VsResourceKeys.LabelEnvironment375PercentFontSizeStyleKey}}"
+            <Label Style="{StaticResource {x:Static vsfx:VsResourceKeys.LabelEnvironment375PercentFontSizeStyleKey}}"
                Foreground="{DynamicResource {x:Static vs:EnvironmentColors.ToolWindowTextBrushKey}}"
                Content="375Percent" HorizontalAlignment="Left" Margin="546,196,0,0" VerticalAlignment="Top"/>
 
-        <TextBlock Style="{StaticResource {x:Static vsfx:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}"
+            <TextBlock Style="{StaticResource {x:Static vsfx:VsResourceKeys.TextBlockEnvironment310PercentFontSizeStyleKey}}"
             HorizontalAlignment="Left" Margin="576,298,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-    </Grid>
 
+            <ListBox HorizontalAlignment="Left" Height="100" Margin="39,286,0,0" VerticalAlignment="Top" Width="100">
+                <ListBoxItem>ListBox Item #1</ListBoxItem>
+                <ListBoxItem>ListBox Item #2</ListBoxItem>
+                <ListBoxItem>ListBox Item #3</ListBoxItem>
+            </ListBox>
+            <Button Content="New Window" HorizontalAlignment="Left" Margin="576,73,0,0" VerticalAlignment="Top" Width="112" Click="Button_Click"/>
+        </Grid>
+    </DockPanel>
+ 
 </UserControl>

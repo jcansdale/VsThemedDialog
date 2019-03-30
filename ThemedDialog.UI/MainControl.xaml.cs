@@ -24,5 +24,30 @@ namespace ThemedDialog.UI
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new MyWindow { Owner = GetParentWindow(this) }.ShowDialog();
+        }
+
+        public static Window GetParentWindow(DependencyObject child)
+        {
+            DependencyObject parentObject = VisualTreeHelper.GetParent(child);
+
+            if (parentObject == null)
+            {
+                return null;
+            }
+
+            Window parent = parentObject as Window;
+            if (parent != null)
+            {
+                return parent;
+            }
+            else
+            {
+                return GetParentWindow(parentObject);
+            }
+        }
     }
 }

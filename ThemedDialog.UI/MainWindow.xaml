@@ -7,9 +7,5 @@
         mc:Ignorable="d"
         xmlns:pfui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"
         Title="Visual Studio Window" Height="450" Width="800">
-
-    <Grid>
-        <local:MainControl />
-    </Grid>
-
+    <local:MainControl />
 </pfui:DialogWindow>

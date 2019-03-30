@@ -6,20 +6,5 @@
         xmlns:local="clr-namespace:ThemedDialog.UI"
         mc:Ignorable="d"
         Title="App Window" Height="650" Width="800">
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <StaticResource ResourceKey="ThemedDialogDefaultStylesKey" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
-    <DockPanel>
-        <ListBox x:Name="ThemeListBox" DockPanel.Dock="Top" SelectionChanged="ThemeListBox_SelectionChanged">
-            <Label>Light</Label>
-            <Label>Blue</Label>
-            <Label>Dark</Label>
-            <Label>HighContrast</Label>
-        </ListBox>
-        <local:MainControl />
-    </DockPanel>
+    <local:MainControl />
 </Window>
