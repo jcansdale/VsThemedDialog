@@ -14,13 +14,7 @@
                 <ResourceDictionary Source="Themes/CommonControlsComboboxStyle.xaml" />
                 <ResourceDictionary Source="Themes/CommonControlsTextboxStyle.xaml" />
                 <ResourceDictionary Source="Themes/ThemedDialogStyles.xaml" />
-
-                <ResourceDictionary Source="Themes/HighContrast/VsBrushes.xaml" />
-                <ResourceDictionary Source="Themes/HighContrast/VsColors.xaml" />
-                <ResourceDictionary Source="Themes/HighContrast/CommonControlsColors.xaml" />
-                <ResourceDictionary Source="Themes/HighContrast/ThemedDialogColors.xaml" />
-                <ResourceDictionary Source="Themes/HighContrast/EnvironmentColors.xaml" />
-                <ResourceDictionary Source="Themes/HighContrast/TreeViewColors.xaml" />
+                <ResourceDictionary Source="Themes/HighContrast/Theme.xaml" />
             </ResourceDictionary.MergedDictionaries>
             
             <ResourceDictionary x:Key="{x:Static vsfx:VsResourceKeys.ThemedDialogDefaultStylesKey}" Source="Themes/ThemedDialogDefaultStyles.xaml" />
